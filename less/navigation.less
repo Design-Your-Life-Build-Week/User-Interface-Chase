@@ -1,0 +1,30 @@
+// Navigation Styles here
+header {
+    display: flex;
+	justify-content: space-between;
+    align-items: baseline;
+    padding: 33px 0px;
+
+    @media @mobile {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 0px;
+      }
+    nav {
+        display: flex;
+        justify-content: space-evenly;
+        width: 50%;
+        @media @mobile {
+            justify-content: space-around;
+            width:100%;
+            padding-top: 20px;
+        }
+        a {
+            text-decoration: none;
+            font-size: 1.7rem;
+            color: @font-color;
+        }
+    }
+
+}
