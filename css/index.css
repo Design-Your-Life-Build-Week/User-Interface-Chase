@@ -141,7 +141,7 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Indie Flower', cursive;
+  font-family: Poppins;
 }
 h1 {
   font-size: 4rem;
@@ -164,7 +164,7 @@ img {
   height: auto;
 }
 .container {
-  max-width: 800px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
@@ -178,33 +178,61 @@ img {
 header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  padding: 33px 0px;
+  align-items: center;
+  padding: 30px 30px 30px 30px;
+  background: linear-gradient(to right, #FCE1BC, #FFDBFE);
 }
 @media (max-width: 500px) {
   header {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0px 0px 0px;
+  }
+}
+header .lefthead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: auto;
+  text-align: center;
+}
+header .lefthead img {
+  padding: 15px;
+}
+@media (max-width: 500px) {
+  header .lefthead {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 15px 0px;
+    text-align: center;
   }
 }
 header nav {
   display: flex;
   justify-content: space-evenly;
-  width: 50%;
+  width: 40%;
 }
 @media (max-width: 500px) {
   header nav {
     justify-content: space-around;
+    flex-direction: column;
     width: 100%;
-    padding-top: 20px;
   }
 }
 header nav a {
   text-decoration: none;
   font-size: 1.7rem;
   color: #212529;
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 500px) {
+  header nav a {
+    padding: 20px;
+    border-top: solid white 3px;
+  }
 }
 .footer {
   width: 100%;
@@ -217,9 +245,8 @@ header nav a {
   font-size: 1.6rem;
   padding: 20px;
 }
-.fulldash {
-  width: 100%;
-  border-top: 2px dashed silver;
+.home {
+  padding: 0px 40px;
 }
 .home .intro {
   border-bottom: 2px dashed #C0C0C0;
@@ -298,7 +325,8 @@ header nav a {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 500px) {
   .home .content-pick {

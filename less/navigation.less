@@ -2,28 +2,53 @@
 header {
     display: flex;
 	justify-content: space-between;
-    align-items: baseline;
-    padding: 33px 0px;
+    align-items: center;
+    padding: 30px 30px 30px 30px;;
+    background: linear-gradient(to right, #FCE1BC , #FFDBFE);
+    
 
     @media @mobile {
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
-        padding: 15px 0px;
+        padding: 15px 0px 0px 0px;
+      }
+      .lefthead {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+        text-align: center;
+        img{
+            padding: 15px;
+        }
+        @media @mobile {
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0px;
+            text-align: center;
+          }
       }
     nav {
         display: flex;
         justify-content: space-evenly;
-        width: 50%;
+        width:40%;
         @media @mobile {
             justify-content: space-around;
+            flex-direction: column;
             width:100%;
-            padding-top: 20px;
         }
         a {
             text-decoration: none;
             font-size: 1.7rem;
             color: @font-color;
+            width: 100%;
+            text-align: center;
+            @media @mobile {
+                padding: 20px;
+                border-top: solid white 3px;
+                }
         }
     }
 
