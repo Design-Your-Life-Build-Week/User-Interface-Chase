@@ -28,7 +28,7 @@ justify-content: center;
 	background-color: @color0;
 	background: linear-gradient(@main-color, @main-color2);
 	border-radius: 6px;
-	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.4);
+	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.6);
 	height: 250px;
 	margin: 1.5rem;
 	overflow: hidden;
@@ -69,10 +69,13 @@ justify-content: center;
             .profilepicture {
                 margin: 30px 5px 10px 5px;
                 text-align: center;
+                img {
+                    border-radius: 50%;
+                }
             }
 			.level {
 				background: rgba(0,0,0,0.15);
-				border-radius: 100px;
+				border-radius: 10px;
 				color: @color0;
 				font-size: 0.75em;
 				font-weight: bold;
@@ -82,14 +85,13 @@ justify-content: center;
 				white-space: nowrap;
 			}
 			.points {
-				background: rgba(0,0,0,0.15);
+                background: rgba(0,0,0,0.5);
+                text-align: center;
 				border-radius: 100px;
 				color: @color0;
 				font-size: 1.6rem;
 				font-weight: bold;
-				padding: 0.125rem 0.75rem;
-				text-transform: uppercase;
-				top: 15%;
+				padding: 0.6rem 0.75rem;
 				top: 85%;
 				white-space: nowrap;
 			}
@@ -120,7 +122,7 @@ justify-content: center;
 			bottom: 1rem;
 			color: @color0;
 			display: flex;
-			font-size: 2rem;
+			font-size: 4rem;
 			left: 1rem;
 			position: absolute;
 			right: 1rem;
@@ -133,7 +135,15 @@ justify-content: center;
 				font-weight: bold;
                 text-transform: uppercase;
                 padding:10px;
-			}
+            }
+            a {
+            &:visited {
+                color: white;
+            }
+            &:link {
+                color: white;
+            }
+        }
 			div.value {
 				font-size: 1.5rem;
 				font-weight: bold;
