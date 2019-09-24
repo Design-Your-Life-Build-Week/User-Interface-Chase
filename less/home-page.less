@@ -3,7 +3,7 @@
 .home {
   padding: 0px 40px;
   .intro{
-    border-bottom: 2px solid @navigation-border;
+    border-bottom: 2px solid @navborder;
     .textintro{
     margin: 15px 0px;
     }
@@ -31,7 +31,7 @@
         font-size: 6rem;
         line-height: 9.6rem;
         #colorful {
-          background: -webkit-linear-gradient(#FCE1BC, #FFDBFE);
+          background: -webkit-linear-gradient(@main-color, @main-color2);
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
         }
@@ -65,15 +65,21 @@
         border-radius: 5px;
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         @media @mobile {
+          display:none;
           width: 100%;
         }
       }
+    }
+    .textend {
+      margin-top: 35px;
+      padding-top: 40px;
+      border-top: 2px solid @navborder;
     }
   }
 
   .inverse-content {
     padding-bottom: 30px;
-    border-bottom: 2px solid @navigation-border;
+    border-bottom: 2px solid @navborder;
     @media @mobile {
       flex-direction: column-reverse;
       margin: 30px 0;
@@ -103,7 +109,7 @@
 
   .content-pick {
     padding: 30px;
-    border-top: 2px solid @navigation-border;
+    border-top: 2px solid @navborder;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -115,7 +121,7 @@
 
     .destination {
       width: 60%;
-      background: linear-gradient(to right, #08003d87 , #4e486e87);
+      background: linear-gradient(to right, @darkpurple , @lightpurple);
       border-radius: 15px;
       text-align: center;
       box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -130,7 +136,7 @@
         background-size: 200% auto;
         color: white;
         border-radius: 10px;
-        background-image: linear-gradient(to right, #BBD2FE 0%, #BFF4FE 51%, rgb(92, 132, 206) 100%);
+        background-image: linear-gradient(to right, @button1 0%, @button2 51%, @button3 100%);
         color:#08003d87;
         font-weight: bold;
         font-size: 1.8rem;
