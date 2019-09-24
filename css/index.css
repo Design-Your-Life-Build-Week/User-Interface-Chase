@@ -213,7 +213,13 @@ header .lefthead img {
 header nav {
   display: flex;
   justify-content: space-evenly;
-  width: 40%;
+  align-items: center;
+  width: 50%;
+}
+@media (max-width: 800px) {
+  header nav {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 500px) {
   header nav {
@@ -225,15 +231,25 @@ header nav {
 header nav a {
   text-decoration: none;
   font-size: 2rem;
-  color: #212529;
+  color: black;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 800px) {
+  header nav a {
+    text-align: end;
+    margin: 5px auto;
+  }
 }
 @media (max-width: 500px) {
   header nav a {
     padding: 20px;
     border-top: solid white 3px;
+    text-align: center;
   }
+}
+header nav a:hover {
+  text-decoration: underline;
 }
 .footer {
   width: 100%;
@@ -241,7 +257,7 @@ header nav a {
 }
 .footer p {
   text-align: center;
-  color: #212529;
+  color: black;
   font-size: 1.6rem;
   padding: 20px;
 }
@@ -323,8 +339,14 @@ header nav a {
 }
 @media (max-width: 500px) {
   .home .content-section .img-content img {
+    display: none;
     width: 100%;
   }
+}
+.home .content-section .textend {
+  margin-top: 35px;
+  padding-top: 40px;
+  border-top: 2px solid #C0C0C0;
 }
 .home .inverse-content {
   padding-bottom: 30px;
@@ -371,7 +393,7 @@ header nav a {
 }
 .home .content-pick .destination {
   width: 60%;
-  background: linear-gradient(to right, #08003d87, #4e486e87);
+  background: linear-gradient(to right, #5f51be, #9089b8);
   border-radius: 15px;
   text-align: center;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
@@ -401,4 +423,175 @@ header nav a {
   .home .content-pick .destination {
     width: 85%;
   }
+}
+.containers {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 500px) {
+  .containers {
+    max-width: 450px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card {
+  background-color: #ffffff;
+  background: linear-gradient(#FCE1BC, #FFDBFE);
+  border-radius: 6px;
+  box-shadow: 0 8px 16px -8px rgba(0, 0, 0, 0.6);
+  height: 250px;
+  margin: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  width: 450px;
+}
+.card h1 {
+  text-align: center;
+}
+.card .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+}
+.card .additional {
+  background: linear-gradient(#9089b8, #5f51be);
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  transition: width 0.4s;
+  width: 150px;
+  z-index: 2;
+}
+.card .additional .user-card {
+  float: left;
+  height: 100%;
+  position: relative;
+  width: 150px;
+}
+.card .additional .user-card:after {
+  border-left: 2px solid rgba(0, 0, 0, 0.025);
+  content: "";
+  display: block;
+  height: 80%;
+  position: absolute;
+  right: -2px;
+  top: 10%;
+}
+.card .additional .profilepicture {
+  margin: 30px 5px 10px 5px;
+  text-align: center;
+}
+.card .additional .profilepicture img {
+  border-radius: 50%;
+}
+.card .additional .level {
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 0.75em;
+  font-weight: bold;
+  padding: 0.125rem 0.75rem;
+  text-transform: uppercase;
+  top: 15%;
+  white-space: nowrap;
+}
+.card .additional .points {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  border-radius: 100px;
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 0.6rem 0.75rem;
+  top: 85%;
+  white-space: nowrap;
+}
+.card .additional svg {
+  top: 50%;
+}
+.card .additional .more-info {
+  float: left;
+  height: 100%;
+  left: 150px;
+  position: absolute;
+  width: 300px;
+}
+.card .additional .more-info h1 {
+  color: #ffffff;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.card .additional .coords {
+  color: #ffffff;
+  font-size: 2rem;
+  margin: 2rem 1rem;
+}
+.card .additional .coords span + span {
+  float: right;
+}
+.card .additional .stats {
+  bottom: 1rem;
+  color: #ffffff;
+  display: flex;
+  font-size: 4rem;
+  left: 1rem;
+  position: absolute;
+  right: 1rem;
+  top: auto;
+}
+.card .additional .stats i {
+  display: block;
+}
+.card .additional .stats div.title {
+  font-size: 0.75rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 10px;
+}
+.card .additional .stats a:visited {
+  color: white;
+}
+.card .additional .stats a:link {
+  color: white;
+}
+.card .additional .stats div.value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+}
+.card .additional .stats div.value.infinity {
+  font-size: 2.5rem;
+}
+.card .additional .stats > div {
+  flex: 1;
+  text-align: center;
+}
+.card:hover .additional {
+  border-radius: 0 5px 5px 0;
+  width: 100%;
+}
+.card .general {
+  box-sizing: border-box;
+  height: 100%;
+  padding-top: 0;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 300px;
+  z-index: 1;
+}
+.card .general .more {
+  bottom: 1rem;
+  font-size: 1.2rem;
+  position: absolute;
+  right: 1rem;
 }

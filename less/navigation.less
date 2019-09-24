@@ -1,10 +1,9 @@
-// Navigation Styles here
 header {
     display: flex;
 	justify-content: space-between;
     align-items: center;
     padding: 30px 30px 30px 30px;;
-    background: linear-gradient(to right, #FCE1BC , #FFDBFE);
+    background: linear-gradient(to right, @main-color , @main-color2);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 
     @media @mobile {
@@ -34,9 +33,10 @@ header {
     nav {
         display: flex;
         justify-content: space-evenly;
-        width:40%;
+        align-items: center;
+        width:50%;
         @media @tablet {
-
+            flex-wrap: wrap;
         }
         @media @mobile {
             justify-content: space-around;
@@ -49,11 +49,19 @@ header {
             color: @font-color;
             width: 100%;
             text-align: center;
+            @media @tablet {
+                text-align: end;
+                margin: 5px auto;
+                }    
             @media @mobile {
                 padding: 20px;
                 border-top: solid white 3px;
+                text-align: center;
                 }
         }
+        a:hover {
+            text-decoration: underline;
+          }
     }
 
 }
