@@ -253,7 +253,7 @@ header nav a:hover {
 }
 .footer {
   width: 100%;
-  background: #FCE1BC;
+  background: -webkit-linear-gradient(#FCE1BC, #FFDBFE);
 }
 .footer p {
   text-align: center;
@@ -261,14 +261,24 @@ header nav a:hover {
   font-size: 1.6rem;
   padding: 20px;
 }
+body {
+  background: -webkit-linear-gradient(#e2fcffa9, #ffffff87);
+}
 .home {
-  padding: 0px 40px;
+  padding: 10px 40px;
 }
 .home .intro {
   border-bottom: 2px solid #C0C0C0;
 }
 .home .intro .textintro {
   margin: 15px 0px;
+}
+.home .intro .textintro h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
+.home .intro .textintro p {
+  text-align: center;
 }
 .home .content-section {
   margin: 30px 0;
@@ -363,6 +373,10 @@ header nav a:hover {
   padding-top: 40px;
   border-top: 2px solid #C0C0C0;
 }
+.home .content-section .textend h2 {
+  font-size: 4rem;
+  font-weight: bold;
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px solid #C0C0C0;
@@ -413,6 +427,7 @@ header nav a:hover {
   text-align: center;
   box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
   color: white;
+  padding-top: 20px;
 }
 .home .content-pick .destination button {
   cursor: pointer;
@@ -438,6 +453,9 @@ header nav a:hover {
   .home .content-pick .destination {
     width: 85%;
   }
+}
+body {
+  background: -webkit-linear-gradient(#e2fcffa9, #ffffff87);
 }
 .containers {
   max-width: 1100px;
