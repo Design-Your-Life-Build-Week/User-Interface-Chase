@@ -25,6 +25,21 @@
     
     .quote {
       width: 48%;
+      animation: fadeIn 2s ease-in-out 0.2s backwards;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(.3);
+        }
+        80% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
       h2 {
         font-style: normal;
         font-weight: bold;
@@ -139,7 +154,7 @@
         background-image: linear-gradient(to right, @button1 0%, @button2 51%, @button3 100%);
         color:#08003d87;
         font-weight: bold;
-        font-size: 1.8rem;
+        text-decoration: none;
        }
        button:hover {
         background-position: right center; /* change the direction of the change here */

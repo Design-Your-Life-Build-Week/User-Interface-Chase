@@ -290,8 +290,23 @@ header nav a:hover {
 }
 .home .content-section .quote {
   width: 48%;
+  animation: fadeIn 2s ease-in-out 0.2s backwards;
   align-items: center;
   text-align: center;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  80% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 .home .content-section .quote h2 {
   font-style: normal;
@@ -412,7 +427,7 @@ header nav a:hover {
   background-image: linear-gradient(to right, #BBD2FE 0%, #BFF4FE 51%, #5c84ce 100%);
   color: #08003d87;
   font-weight: bold;
-  font-size: 1.8rem;
+  text-decoration: none;
 }
 .home .content-pick .destination button:hover {
   background-position: right center;
