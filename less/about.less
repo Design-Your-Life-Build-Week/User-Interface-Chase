@@ -1,0 +1,178 @@
+
+body {
+	background: -webkit-linear-gradient( #e2fcffa9, #ffffff87);
+  }
+.containers{
+max-width: 1100px;
+width: 100%;
+margin: 0 auto;
+@media @mobile {
+  max-width: 450px;
+  width: 100%;
+  margin: 0 auto;
+}
+}
+.profiles{
+display:flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.card {
+	background-color: @color0;
+	background: linear-gradient(@main-color, @main-color2);
+	border-radius: 6px;
+	box-shadow: 0 8px 16px -8px rgba(0,0,0,0.6);
+	height: 250px;
+	margin: 1.5rem;
+	overflow: hidden;
+	position: relative;
+	width: 450px;
+	h1 {
+		text-align: center;
+    }
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+      }
+	.additional {
+		background: linear-gradient(@lightpurple, @darkpurple);
+		height: @height1;
+		overflow: hidden;
+		position: absolute;
+		transition: width 0.4s;
+		width: @width1;
+		z-index: 2;
+		.user-card {
+			float: left;
+			height: @height1;
+			position: relative;
+			width: @width1;
+			&:after {
+					border-left: 2px solid rgba(0,0,0,0.025);
+					content: "";
+					display: block;
+					height: 80%;
+					position: absolute;
+					right: -2px;
+					top: 10%;
+				}
+            }
+            .profilepicture {
+                margin: 30px 5px 10px 5px;
+                text-align: center;
+                img {
+                    border-radius: 50%;
+                }
+            }
+			.level {
+				background: rgba(0,0,0,0.15);
+				border-radius: 10px;
+				color: @color0;
+				font-size: 0.75em;
+				font-weight: bold;
+				padding: 0.125rem 0.75rem;
+				text-transform: uppercase;
+				top: 15%;
+				white-space: nowrap;
+			}
+			.points {
+                background: rgba(0,0,0,0.5);
+                text-align: center;
+				border-radius: 100px;
+				color: @color0;
+				font-size: 1.6rem;
+				font-weight: bold;
+				padding: 0.6rem 0.75rem;
+				top: 85%;
+				white-space: nowrap;
+			}
+			svg {
+				top: 50%;
+			}
+		.more-info {
+			float: left;
+			height: @height1;
+			left: 150px;
+			position: absolute;
+			width: @width2;
+			h1 {
+                color: @color0;
+                margin-top: 10px;
+				margin-bottom: 0;
+			}
+		}
+		.coords {
+			color: @color0;
+			font-size: 2rem;
+			margin: 2rem 1rem;
+			span+span {
+				float: right;
+			}
+		}
+		.stats {
+			bottom: 1rem;
+			color: @color0;
+			display: flex;
+			font-size: 4rem;
+			left: 1rem;
+			position: absolute;
+			right: 1rem;
+			top: auto;
+			i {
+				display: block;
+			}
+			div.title {
+				font-size: 0.75rem;
+				font-weight: bold;
+                text-transform: uppercase;
+                padding:10px;
+            }
+            a {
+            &:visited {
+                color: white;
+            }
+            &:link {
+                color: white;
+            }
+        }
+			div.value {
+				font-size: 1.5rem;
+				font-weight: bold;
+				line-height: 1.5rem;
+			}
+			div.value.infinity {
+				font-size: 2.5rem;
+			}
+		}
+		.stats>div {
+			flex: 1;
+			text-align: center;
+		}
+	}
+	&:hover {
+		.additional {
+			border-radius: 0 5px 5px 0;
+			width: 100%;
+		}
+	}
+	.general {
+		box-sizing: border-box;
+		height: @height1;
+		padding-top: 0;
+		padding: 1rem;
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: @width2;
+        z-index: 1;
+		.more {
+			bottom: 1rem;
+			font-size: 1.2rem;
+			position: absolute;
+			right: 1rem;
+		}
+	}
+}

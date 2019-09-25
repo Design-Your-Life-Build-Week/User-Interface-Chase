@@ -1,0 +1,184 @@
+
+body {
+  background: -webkit-linear-gradient( #e2fcffa9, #ffffff87);
+}
+.home {
+  padding: 10px 40px;
+  .intro{
+    border-bottom: 2px solid @navborder;
+    .textintro{
+    margin: 15px 0px;
+    h2{
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    p {
+      text-align: center;
+    }
+    }
+  }
+  .content-section {
+    margin: 30px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media @tablet {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    @media @mobile {
+      flex-direction: column;
+    }
+    
+    .quote {
+      width: 48%;
+      animation: fadeIn 2s ease-in-out 0.2s backwards;
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: scale(.3);
+        }
+        80% {
+          opacity: 1;
+          transform: scale(1.05);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      h2 {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 6rem;
+        line-height: 9.6rem;
+        #colorful {
+          background: -webkit-linear-gradient(@main-color, @main-color2);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+        @media @tablet {
+          line-height: 5rem;
+        }
+      }
+      align-items: center;
+
+      text-align: center;
+      @media @tablet {
+        width: 100%;
+      }
+      @media @mobile {
+        width: 100%;
+      }
+    }
+
+    .img-content {
+      width: 48%;
+      padding-left: 1%;
+
+      @media @tablet {
+        width: 80%;
+      }
+      @media @mobile {
+        width: 100%;
+      }
+
+      img {
+        border-radius: 5px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        @media @mobile {
+          display:none;
+          width: 100%;
+        }
+      }
+    }
+    .textend {
+      margin-top: 35px;
+      padding-top: 40px;
+      border-top: 2px solid @navborder;
+      h2{
+        font-size: 4rem;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .inverse-content {
+    padding-bottom: 30px;
+    border-bottom: 2px solid @navborder;
+    @media @mobile {
+      flex-direction: column-reverse;
+      margin: 30px 0;
+    }
+
+    .text-content {
+      padding-left: 1%;
+      padding-right: 0;
+    }
+
+    .img-content {
+      padding-right: 1%;
+      padding-left: 0;
+    }
+  }
+
+  .content-destination {
+    width: 75%;
+    margin: 0 auto 30px;
+    @media @mobile {
+      width: 100%;
+    }
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  .content-pick {
+    padding: 30px;
+    border-top: 2px solid @navborder;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media @mobile {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .destination {
+      width: 60%;
+      background: linear-gradient(to right, @darkpurple , @lightpurple);
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+      color: white;
+      padding-top: 20px;
+      button {
+        cursor: pointer;
+        margin: 10px;
+        padding: 15px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;
+        border-radius: 10px;
+        background-image: linear-gradient(to right, @button1 0%, @button2 51%, @button3 100%);
+        color:#08003d87;
+        font-weight: bold;
+        text-decoration: none;
+       }
+       button:hover {
+        background-position: right center; /* change the direction of the change here */
+        color:white;
+      }
+      
+      @media @mobile {
+        width: 85%;
+
+      }
+    }
+  }
+}
